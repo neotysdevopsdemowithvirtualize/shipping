@@ -7,6 +7,7 @@ pipeline {
         jdk 'jdk8'
     }
   environment {
+    VERSION="0.1"
     APP_NAME = "shipping"
     TAG = "neotysdevopsdemo/${APP_NAME}"
     TAG_DEV = "${TAG}:DEV-${VERSION}"
