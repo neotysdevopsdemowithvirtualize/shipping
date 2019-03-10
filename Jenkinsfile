@@ -102,7 +102,7 @@ pipeline {
                       project: "$WORKSPACE/target/neoload/Shipping_NeoLoad/Shipping_NeoLoad.nlp",
                       testName: 'HealthCheck_shipping_${VERSION}_${BUILD_NUMBER}',
                       testDescription: 'HealthCheck_shipping_${VERSION}_${BUILD_NUMBER}',
-                      commandLineOption: "-nlweb -loadGenerators $WORKSPACE/infrastructure/infrastructure/neoload/lg/lg.yaml -nlwebToken $NLAPIKEY -variables host=shipping,port=8082,basicPath=${BASICCHECKURI}",
+                      commandLineOption: "-nlweb -loadGenerators $WORKSPACE/infrastructure/infrastructure/neoload/lg/lg.yaml -nlwebToken $NLAPIKEY -variables host=shipping,port=8085,basicPath=${BASICCHECKURI}",
                       scenario: 'DynatraceSanityCheck', sharedLicense: [server: 'NeoLoad Demo License', duration: 2, vuCount: 200],
                       trendGraphs: [
                               [name: 'Limit test Catalogue API Response time', curve: ['CatalogueList>Actions>Get Catalogue List'], statistic: 'average'],
@@ -128,7 +128,7 @@ pipeline {
                        project: "$WORKSPACE/target/neoload/Shipping_NeoLoad/Shipping_NeoLoad.nlp",
                        testName: 'DynatraceSanityCheck_shipping_${VERSION}_${BUILD_NUMBER}',
                        testDescription: 'DynatraceSanityCheck_shipping_${VERSION}_${BUILD_NUMBER}',
-                       commandLineOption: "-nlweb -loadGenerators $WORKSPACE/infrastructure/infrastructure/neoload/lg/lg.yaml -nlwebToken $NLAPIKEY -variables host=shipping,port=8082",
+                       commandLineOption: "-nlweb -loadGenerators $WORKSPACE/infrastructure/infrastructure/neoload/lg/lg.yaml -nlwebToken $NLAPIKEY -variables host=shipping,port=8085",
                        scenario: 'DYNATRACE_SANITYCHECK', sharedLicense: [server: 'NeoLoad Demo License', duration: 2, vuCount: 200],
                        trendGraphs: [
                                [name: 'Limit test Catalogue API Response time', curve: ['CatalogueList>Actions>Get Catalogue List'], statistic: 'average'],
@@ -167,7 +167,7 @@ pipeline {
                       project: "$WORKSPACE/target/neoload/Shipping_NeoLoad/Shipping_NeoLoad.nlp",
                       testName: 'FuncCheck_shipping_${VERSION}_${BUILD_NUMBER}',
                       testDescription: 'FuncCheck_shipping_${VERSION}_${BUILD_NUMBER}',
-                      commandLineOption: "-nlweb -loadGenerators $WORKSPACE/infrastructure/infrastructure/neoload/lg/lg.yaml -nlwebToken $NLAPIKEY -variables host=shipping,port=8082,shippingPath=${SHIPPINGURI}",
+                      commandLineOption: "-nlweb -loadGenerators $WORKSPACE/infrastructure/infrastructure/neoload/lg/lg.yaml -nlwebToken $NLAPIKEY -variables host=shipping,port=8085,shippingPath=${SHIPPINGURI}",
                       scenario: 'Shipping_Load', sharedLicense: [server: 'NeoLoad Demo License', duration: 2, vuCount: 200],
                       trendGraphs: [
                               [name: 'Limit test Catalogue API Response time', curve: ['CatalogueList>Actions>Get Catalogue List'], statistic: 'average'],
