@@ -167,7 +167,7 @@ pipeline {
                       project: "$WORKSPACE/target/neoload/Shipping_NeoLoad/Shipping_NeoLoad.nlp",
                       testName: 'FuncCheck_shipping_${VERSION}_${BUILD_NUMBER}',
                       testDescription: 'FuncCheck_shipping_${VERSION}_${BUILD_NUMBER}',
-                      commandLineOption: "-nlweb -loadGenerators $WORKSPACE/infrastructure/infrastructure/neoload/lg/lg.yaml -nlwebToken $NLAPIKEY -variables host=shipping,port=80,shippingPath=${SHIPPINGURI}",
+                      commandLineOption: "-nlweb -loadGenerators $WORKSPACE/infrastructure/infrastructure/neoload/lg/lg.yaml -nlwebToken $NLAPIKEY -variables carts_host=shipping,carts_port=80,shippingPath=${SHIPPINGURI}",
                       scenario: 'Shipping_Load', sharedLicense: [server: 'NeoLoad Demo License', duration: 2, vuCount: 200],
                       trendGraphs: [
                               [name: 'Limit test Catalogue API Response time', curve: ['CatalogueList>Actions>Get Catalogue List'], statistic: 'average'],
