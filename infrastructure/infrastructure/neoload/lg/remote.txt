@@ -1,1 +1,1 @@
-nl-lg-shipping.cicd-neotys.svc
+docker-lg1
