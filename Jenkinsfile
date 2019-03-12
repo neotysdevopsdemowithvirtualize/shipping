@@ -95,7 +95,7 @@ pipeline {
         }
       steps {
         echo "Waiting for the service to start..."
-        sleep 300
+        sleep 150
 
           script {
               neoloadRun executable: '/home/neoload/neoload/bin/NeoLoadCmd',
