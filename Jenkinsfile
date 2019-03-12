@@ -96,6 +96,7 @@ pipeline {
             dockerfile {
                 args '--user root -v /tmp:/tmp --network=shipping_master_default'
                 dir 'infrastructure/infrastructure/neoload/controller'
+                reuseNode true
             }
         }
       steps {
@@ -130,6 +131,7 @@ pipeline {
             dockerfile {
                 args '--user root -v /tmp:/tmp --network=shipping_master_default'
                 dir 'infrastructure/infrastructure/neoload/controller'
+                reuseNode true
             }
         }
        steps {
@@ -169,6 +171,7 @@ pipeline {
             dockerfile {
                 args '--user root -v /tmp:/tmp --network=shipping_master_default'
                 dir 'infrastructure/infrastructure/neoload/controller'
+                reuseNode true
             }
         }
       steps {
