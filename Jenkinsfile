@@ -87,6 +87,11 @@ pipeline {
           }
       }
     stage('Run health check in dev') {
+    when {
+                    expression {
+                        return env.BRANCH_NAME ==~ 'release/.*' || env.BRANCH_NAME ==~ 'master'
+                    }
+                }
         agent {
             dockerfile {
                 args '--user root -v /tmp:/tmp --network=shipping_master_default'
@@ -116,6 +121,11 @@ pipeline {
       }
     }
     stage('Sanity Check') {
+    when {
+                    expression {
+                        return env.BRANCH_NAME ==~ 'release/.*' || env.BRANCH_NAME ==~ 'master'
+                    }
+                }
         agent {
             dockerfile {
                 args '--user root -v /tmp:/tmp --network=shipping_master_default'
