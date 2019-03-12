@@ -154,7 +154,7 @@ pipeline {
 
        }
     }
-    stage('Run functional check in dev') {
+   /* stage('Run functional check in dev') {
         agent {
             dockerfile {
                 args '--user root -v /tmp:/tmp --network=shipping_master_default'
@@ -178,7 +178,7 @@ pipeline {
 
 
       }
-    }
+    }*/
     stage('Mark artifact for staging namespace') {
 
         steps {
